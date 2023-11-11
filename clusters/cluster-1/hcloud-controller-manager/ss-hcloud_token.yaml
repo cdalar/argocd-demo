@@ -11,4 +11,4 @@ spec:
   template:
     metadata:
       name: hcloud
-      namespace: default
+      namespace: kube-system
