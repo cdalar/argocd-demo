@@ -84,4 +84,7 @@ spec:
             requests:
               cpu: 100m
               memory: 50Mi
+            limits:
+              cpu: 100m
+              memory: 50Mi
       priorityClassName: system-cluster-critical
