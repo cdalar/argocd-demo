@@ -1,2 +1,2 @@
 # argocd-demo
-argocd demo repo
+argocd demo repo1
