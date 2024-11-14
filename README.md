@@ -1,2 +1,4 @@
-# argocd-demo
-argocd demo repo1
+## reach to ArgoCD UI
+```
+kubectl port-forward svc/argocd-server -n argocd 8080:443
+```
