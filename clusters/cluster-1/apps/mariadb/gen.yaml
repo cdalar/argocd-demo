@@ -4,7 +4,7 @@ kind: NetworkPolicy
 apiVersion: networking.k8s.io/v1
 metadata:
   name: mariadb
-  namespace: "mariadb"
+  namespace: "apps"
   labels:
     app.kubernetes.io/instance: mariadb
     app.kubernetes.io/managed-by: Helm
@@ -35,7 +35,7 @@ apiVersion: policy/v1
 kind: PodDisruptionBudget
 metadata:
   name: mariadb
-  namespace: "mariadb"
+  namespace: "apps"
   labels:
     app.kubernetes.io/instance: mariadb
     app.kubernetes.io/managed-by: Helm
@@ -57,7 +57,7 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: mariadb
-  namespace: "mariadb"
+  namespace: "apps"
   labels:
     app.kubernetes.io/instance: mariadb
     app.kubernetes.io/managed-by: Helm
@@ -72,7 +72,7 @@ apiVersion: v1
 kind: Secret
 metadata:
   name: mariadb
-  namespace: "mariadb"
+  namespace: "apps"
   labels:
     app.kubernetes.io/instance: mariadb
     app.kubernetes.io/managed-by: Helm
@@ -82,14 +82,14 @@ metadata:
     app.kubernetes.io/part-of: mariadb
 type: Opaque
 data:
-  mariadb-root-password: "cVpNWnh6UjBjSA=="
+  mariadb-root-password: "QVhtNXpwQzgxWg=="
 ---
 # Source: mariadb/templates/primary/configmap.yaml
 apiVersion: v1
 kind: ConfigMap
 metadata:
   name: mariadb
-  namespace: "mariadb"
+  namespace: "apps"
   labels:
     app.kubernetes.io/instance: mariadb
     app.kubernetes.io/managed-by: Helm
@@ -135,7 +135,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: mariadb-headless
-  namespace: "mariadb"
+  namespace: "apps"
   labels:
     app.kubernetes.io/instance: mariadb
     app.kubernetes.io/managed-by: Helm
@@ -162,7 +162,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: mariadb
-  namespace: "mariadb"
+  namespace: "apps"
   labels:
     app.kubernetes.io/instance: mariadb
     app.kubernetes.io/managed-by: Helm
@@ -191,7 +191,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: mariadb
-  namespace: "mariadb"
+  namespace: "apps"
   labels:
     app.kubernetes.io/instance: mariadb
     app.kubernetes.io/managed-by: Helm
@@ -215,7 +215,7 @@ spec:
   template:
     metadata:
       annotations:
-        checksum/configuration: 99a28c4c30331abc804539ba5b1d196307a446a3e755a58898f0a50c4e416368
+        checksum/configuration: c0b240645fb212fc2424f5c168968be1003cc4f5fbf4e78e9ec520ee7c932b9e
       labels:
         app.kubernetes.io/instance: mariadb
         app.kubernetes.io/managed-by: Helm
