@@ -1,18 +1,18 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: whoami
+  name: longhorn
   namespace: argocd
 spec:
   destination:
-    namespace: apps
+    namespace: longhorn-system
     server: https://kubernetes.default.svc
   project: default
   source:
     directory:
       jsonnet: {}
       recurse: true
-    path: clusters/cluster-1/apps/whoami
+    path: clusters/cluster-1/apps/longhorn
     repoURL: https://github.com/cdalar/argocd-demo.git
     targetRevision: dev
   syncPolicy:
