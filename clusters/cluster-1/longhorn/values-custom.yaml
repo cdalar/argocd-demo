@@ -1,2 +1,6 @@
 preUpgradeChecker:  
   jobEnabled: false
+service:
+  ui:
+    # -- Service type for Longhorn UI. (Options: "ClusterIP", "NodePort", "LoadBalancer", "Rancher-Proxy")
+    type: NodePort
